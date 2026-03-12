@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div>
+      <div className=" flex  justify-between px-5 ">
+      {/* <p className="text-3xl font-bold text-red-400">The fun is in coding</p> */}
+      <div>Logo</div>
+      <div className="flex gap-3">
+        <span>Home</span>
+        <span>About</span>
+        <span>Contact</span>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+    <div className="grid grid cols-1 sm:grid-cols-2 text-white p-6 gap-6">
+      <div className="bg-slate-500 p-4 rounded">featured one</div>
+      <div className="bg-slate-500 p-4 rounded">featured two</div>
+      <div className="bg-slate-500 p-4 rounded">featured three</div>
+      <div className="bg-slate-500 p-4 rounded">featured four</div>
+      <div className="bg-slate-500 p-4 rounded">featured five</div>
+      <div className="bg-slate-500 p-4 rounded">featured six</div>
+    </div>
+    </div>
+  );
 }
 
 export default App
