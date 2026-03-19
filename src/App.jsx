@@ -20,23 +20,6 @@ function App() {
             <span className="cursor-pointer">Contact</span>
           </div>
 
-          <div className="flex gap-3">
-            {/* Dark Mode Button */}
-            <button
-              onClick={() => setDark(!dark)}
-              className="border px-2 py-1 rounded"
-            >
-              🌙
-            </button>
-
-            {/* Hamburger */}
-            <button
-              className="md:hidden text-xl"
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-              ☰
-            </button>
-          </div>
         </nav>
 
         {/* MOBILE MENU */}
