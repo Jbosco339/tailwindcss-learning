@@ -2,28 +2,25 @@ import { useState } from "react";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [dark, setDark] = useState(false);
 
   return (
-    <div className={dark ? "dark" : ""}>
       <div className="min-h-screen bg-gray-100 dark:bg-gray-900 dark:text-white">
-
-        {/* navbar */}
-        <nav className="flex justify-between items-center px-6 py-4 bg-white dark:bg-gray-800 shadow">
+        <nav className="flex justify-between items-center px-6 py-4 bg-white dark:bg-gray-800 shadow fixed w-screen">
           <h1 className="font-bold text-lg">TailwindPractice</h1>
-
-          {/* Desktop Nav */}
+          
           <div className="hidden md:flex gap-6">
-            <span className="cursor-pointer">Home</span>
-            <span className="cursor-pointer">About</span>
-            <span className="cursor-pointer">Services</span>
-            <span className="cursor-pointer">Contact</span>
+            <ul className="flex ">
+              <li className="mr-2 cursor-pointer">Home</li>
+              <li className="mr-2 cursor-pointer">About</li>
+              <li className="mr-2 cursor-pointer">Services</li>
+              <li className="mr-2 cursor-pointer">Contact</li>
+            </ul>
+            
           </div>
-
         </nav>
-
-        {/* MOBILE MENU */}
+          
         {menuOpen && (
+         
           <div className="flex flex-col items-center md:hidden bg-gray-200 dark:bg-gray-700 py-4 gap-3">
             <span>Home</span>
             <span>About</span>
@@ -32,7 +29,6 @@ function App() {
           </div>
         )}
 
-        {/* HERO SECTION */}
         <section className="grid md:grid-cols-2 gap-8 p-10 items-center">
           <div>
             <h2 className="text-3xl font-bold mb-4">
@@ -47,12 +43,12 @@ function App() {
             </button>
           </div>
 
-          <div className="bg-blue-400 h-60 rounded flex items-center justify-center text-white">
+          <div className="bg-blue-400 h-60 rounded flex items-center justify-center text-black mt-16">
             Hero Image
           </div>
         </section>
 
-        {/* CARD GRID */}
+        {/* Cards */}
         <section className="p-8">
           <h2 className="text-2xl font-bold mb-6">Featured Cards</h2>
 
@@ -74,17 +70,21 @@ function App() {
 
           <div className="grid md:grid-cols-4 gap-6">
 
-            {/* SIDEBAR */}
-            <aside className="bg-gray-300 dark:bg-gray-700 p-4 rounded md:col-span-1">
+            <div className="bg-gray-300 dark:bg-gray-700 p-4 rounded md:col-span-1">
               <ul className="space-y-3">
                 <li>Dashboard</li>
                 <li>Users</li>
                 <li>Settings</li>
                 <li>Reports</li>
               </ul>
-            </aside>
+            </div>
 
-            {/* MAIN CONTENT */}
+            <div className="bg-cyan-400 text-black flex justify-center items-center h-60 w-60 rounded-full">
+              <p className="text-2xl">Living the Life</p>
+              {/* <p>Now it feels like am there</p> */}
+            </div>
+
+          
             <main className="bg-gray-200 dark:bg-gray-800 p-6 rounded md:col-span-3">
               <p>
                 This is the main dashboard content area. Resize the screen to
@@ -96,7 +96,6 @@ function App() {
         </section>
 
       </div>
-    </div>
   );
 }
 
